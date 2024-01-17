@@ -1,0 +1,46 @@
+---
+import Header from "./Header.astro";
+---
+
+<div class="home">
+    <div class="home-top">
+        <h1>Front end Developer</h1>
+        <Header />
+    </div>
+	<h2>
+		<span>Hola, soy Joaquin Elia, creador de sitios estaticos y aplicaciones webs. De Buenos Aires, Argentina.</span>
+		<span>Mi experiencia la obtuve realizando proyectos freelance y personales.</span>
+	</h2>
+</div>
+
+<style>
+	.home {
+		height: 100dvh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 2rem 4rem;
+		background: url('../assets/bgWNoise.jpg') no-repeat;
+		background-size: cover;
+	}
+	.home-top {
+		display: flex;
+		justify-content: space-between;
+		text-transform: uppercase;
+	}
+	.home-top h1 {
+		font-family: 'Mulish', sans-serif;
+		font-size: 7.5em;
+		max-width: 50rem;
+		letter-spacing: -1.7px;
+		line-height: 7rem;
+	}
+	.home h2 {
+		color: #E4E4E4;
+		width: 52rem;
+		font-size: 2.2em;
+		line-height: 2.8rem;
+		text-wrap: pretty;
+	}
+</style>

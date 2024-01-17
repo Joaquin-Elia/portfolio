@@ -1,0 +1,68 @@
+<section class="work" id="work">
+    <article class="works">
+        <div class="works-text">
+            <h2>EINFINITY</h2>
+            <h3>Proyecto con IA</h3>
+            <p></p>
+        </div>
+        <img src="../../src/assets/einfinity.png" alt="Proyecto einfinity" >
+    </article>
+    <article class="works">
+        <div class="works-text">
+            <h2>MARIANO JUAREZ</h2>
+            <h3>Portfolio para cliente</h3>
+            <p></p>
+        </div>
+        <img src="../../src/assets/marianojuarez.png" alt="Portfolio para cliente Mariano Juarez" >
+    </article>
+    <article class="works">
+        <div class="works-text">
+            <h2>ESTUDIO EYS</h2>
+            <h3>Web para clientes</h3>
+            <p></p>
+        </div>
+        <img src="../../src/assets/estudiojuridicoeys.png" alt="Web para Estudio Juridico Erreguerena Sabalúa" >
+    </article>
+</section>
+
+<style>
+    .work{
+        background-color: #B5C5FF;
+        background-image: url('../assets/workNoise.png');
+    }
+    .works {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        color: var(--proyect-text-color);
+        overflow: hidden;
+    }
+    .works-text {
+        position: relative;
+        top: 5rem;
+        left: 4rem;
+        z-index: 2;
+    }
+    .works-text h3 {
+        margin-top: 1rem;
+        font-size: 2em;
+        letter-spacing: -0.8px;
+    }
+    .works-text h2 {
+        max-width: 40%;
+        font-size: 7.5em;
+        font-family: 'Mulish', sans-serif;
+        line-height: 7rem;
+        letter-spacing: -1.5px;
+    }
+    .works img{
+        position: relative;
+        top: 1rem;
+        right: 5rem;
+        width: 50%;
+        max-width: 50rem;
+        object-fit: contain;
+        transform: perspective(40rem) rotateY(-5deg);
+    }
+</style>
