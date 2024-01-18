@@ -1,34 +1,60 @@
 <section class="work" id="work">
+    <h2 class="work-title">PROYECTOS</h2>
     <article class="works">
         <div class="works-text">
-            <h2>EINFINITY</h2>
-            <h3>Proyecto con IA</h3>
+            <h3>EINFINITY</h2>
+            <h4>Proyecto con IA</h3>
             <p></p>
         </div>
-        <img src="../../src/assets/einfinity.png" alt="Proyecto einfinity" >
+        <img 
+            src="../../src/assets/einfinity.png" 
+            alt="Proyecto einfinity" 
+        >
     </article>
     <article class="works">
         <div class="works-text">
-            <h2>MARIANO JUAREZ</h2>
-            <h3>Portfolio para cliente</h3>
-            <p></p>
+            <h3>MARIANO JUAREZ</h2>
+            <h4>Portfolio para Diseñador Gráfico</h3>
+            <p class="work-description">
+                El objetivo fue exponer el portfolio con un estilo peculiar. En conjunto modificamos el diseño original 
+                para encausarlo en la búsqueda de los estándares de UX y UI. Como característica, en cada actualización, 
+                el orden y rotación de los proyectos se disponen de manera aleatoria
+            </p>
         </div>
-        <img src="../../src/assets/marianojuarez.png" alt="Portfolio para cliente Mariano Juarez" >
+        <img 
+            src="../../src/assets/marianojuarez.png" 
+            alt="Portfolio para cliente Mariano Juarez" 
+        >
     </article>
     <article class="works">
         <div class="works-text">
-            <h2>ESTUDIO EYS</h2>
-            <h3>Web para clientes</h3>
-            <p></p>
+            <h3>ESTUDIO EYS</h2>
+            <h4>Web para clientes</h3>
+            <p class="work-description">
+                Solicitud de una presentación de servicios profesionales, con estética moderna, presencia en la web y 
+                herramientas de cálculo matemático. Previo análisis de tendencias, diseñé un wireframe para proyectar
+                la estructura de la web. Indagué conceptos legales para el desarrollo de cálculos indemnizatorios. 
+                Con procesos modulares pude obtener un código limpio y escalable.
+            </p>
         </div>
-        <img src="../../src/assets/estudiojuridicoeys.png" alt="Web para Estudio Juridico Erreguerena Sabalúa" >
+        <img 
+            src="../../src/assets/estudiojuridicoeys.png" 
+            alt="Web para Estudio Juridico Erreguerena Sabalúa"
+        >
     </article>
 </section>
 
 <style>
     .work{
-        background-color: #B5C5FF;
-        background-image: url('../assets/workNoise.png');
+        background: #B5C5FF url('../assets/workNoise.png');
+    }
+    .work-title{
+        font-size: clamp(2.8em, 15vw, 15em);
+        letter-spacing: -2px;
+        text-align: center;
+        padding: 5rem 0 1rem;
+        font: 'Mulish', sans-serif;
+        font-weight: 900;
     }
     .works {
         width: 100%;
@@ -45,22 +71,30 @@
         z-index: 2;
     }
     .works-text h3 {
-        margin-top: 1rem;
-        font-size: 2em;
-        letter-spacing: -0.8px;
-    }
-    .works-text h2 {
         max-width: 40%;
         font-size: 7.5em;
         font-family: 'Mulish', sans-serif;
         line-height: 7rem;
         letter-spacing: -1.5px;
     }
+    .works-text h4 {
+        margin-top: 1rem;
+        font-size: 2em;
+        letter-spacing: -0.8px;
+    }
+    .work-description {
+        margin-top: 1rem;
+        width: 80%;
+        max-width: 40rem;
+        text-wrap: pretty;
+        font-size: 1.1em;
+        line-height: 1.4rem;
+    }
     .works img{
         position: relative;
         top: 1rem;
         right: 5rem;
-        width: 50%;
+        width: 55%;
         max-width: 50rem;
         object-fit: contain;
         transform: perspective(40rem) rotateY(-5deg);

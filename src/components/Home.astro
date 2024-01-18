@@ -1,12 +1,10 @@
 ---
-import Header from "./Header.astro";
+import NavMenu from "./NavMenu.astro";
 ---
 
 <div class="home">
-    <div class="home-top">
-        <h1>Front end Developer</h1>
-        <Header />
-    </div>
+	<h1 class="home-h1">Front end Developer</h1>
+	<NavMenu />
 	<h2>
 		<span>Hola, soy Joaquin Elia, creador de sitios estaticos y aplicaciones webs. De Buenos Aires, Argentina.</span>
 		<span>Mi experiencia la obtuve realizando proyectos freelance y personales.</span>
@@ -24,23 +22,53 @@ import Header from "./Header.astro";
 		background: url('../assets/bgWNoise.jpg') no-repeat;
 		background-size: cover;
 	}
-	.home-top {
-		display: flex;
-		justify-content: space-between;
-		text-transform: uppercase;
-	}
-	.home-top h1 {
+	.home-h1 {
 		font-family: 'Mulish', sans-serif;
-		font-size: 7.5em;
-		max-width: 50rem;
+		font-size: clamp(3em, 10vw, 8.5em);
+		line-height: clamp(3rem, 9.4vw, 8.2rem);
 		letter-spacing: -1.7px;
-		line-height: 7rem;
+		text-transform: uppercase;
 	}
 	.home h2 {
 		color: #E4E4E4;
-		width: 52rem;
-		font-size: 2.2em;
-		line-height: 2.8rem;
+		max-width: 50rem;
+		font-size: clamp(1.2em, 3vw, 2em);
+		line-height: clamp(1.6rem, 3.5vw, 2.8rem);
 		text-wrap: pretty;
+	}
+	@media (max-width: 75rem) {
+		.home {
+			padding: 2rem;
+		}
+	}
+	@media (max-width: 53rem) {
+		.home {
+			padding: 0;
+			justify-content: center;
+			align-items: center;
+			/* background: url('../assets/bgWNoise.jpg') no-repeat; */
+		}
+		.home-h1 {
+			text-align: center;
+			letter-spacing: 0;
+			font-size: clamp(2.9em, 13vw, 8.5em);
+			line-height: clamp(3rem, 12.4vw, 8.2rem);
+		}
+		.home h2 {
+			color: #E4E4E4;
+			padding: 0 4rem;
+			position: absolute;
+			bottom: 2rem;
+		}
+	}
+	@media (max-width: 29rem) {
+		.home {
+			background-size: 170% 100%;
+			background-position-x: center;
+		}
+		.home h2 {
+			left: 0;
+			padding: 0 1rem;
+		}
 	}
 </style>
