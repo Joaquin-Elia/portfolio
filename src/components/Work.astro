@@ -72,9 +72,11 @@
     }
     .works-text h3 {
         max-width: 40%;
-        font-size: 7.5em;
+        /* font-size: 7.5em; */
+        font-size: clamp(4.8em, 12vw, 8em);
+        line-height: clamp(4.8rem, 11.5vw, 7.5rem);
+        /* line-height: 7rem; */
         font-family: 'Mulish', sans-serif;
-        line-height: 7rem;
         letter-spacing: -1.5px;
     }
     .works-text h4 {
@@ -98,5 +100,17 @@
         max-width: 50rem;
         object-fit: contain;
         transform: perspective(40rem) rotateY(-5deg);
+    }
+    @media (max-width: 1200px) {
+        .works-text {
+            top: 7rem;
+            left: 2rem;
+        }
+        .works img{
+            top: 0;
+            right: 7rem;
+            width: 50%;
+            max-width: 40rem;
+        }
     }
 </style>

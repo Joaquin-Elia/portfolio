@@ -1,40 +1,54 @@
 <nav class="header-nav">
-    <div>
-        <a href="#work">Proyectos</a>
-        <a href="#contact">Contacto</a>
-    </div>
-    <div>
-        <a 
-            href="https://github.com/Joaquin-Elia/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-        >
-            Github
-        </a>
-        <a 
-            href="https://www.linkedin.com/in/joaquin-elia/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-        >
-            Linkedin
-        </a>
-    </div>
+    <a href="/#work">Proyectos</a>
+    <a href="/#about">Sobre mi</a>
+    <a href="/#contact">Contacto</a>
+    <a 
+        href="https://github.com/Joaquin-Elia/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+    >
+        Github
+    </a>
+    <a 
+        href="https://www.linkedin.com/in/joaquin-elia/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+    >
+        Linkedin
+    </a>
+    <a href="/#contact">cv</a>
 </nav>
-
 
 <style>
     .header-nav{
         position: fixed;
         top: 2rem;
         right: 4rem;
-        display: flex;
-        gap: 1rem;
-        font-weight: 500;
+        display: grid;
+        grid-template-columns: auto auto;
         z-index: 3;
+        text-transform: uppercase;
     }
     .header-nav a {
-        padding: .5rem .7rem;
-        text-transform: uppercase;
+        position: relative;
+        padding: .4rem .7rem;
+        transition: .5s;
+    }
+    .header-nav a::after{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 100%;
+        left: 0;
+        left: .7rem;
+        height: 1%;
+        width: 30%;
+        opacity: 0;
+        background-color: #fff;
+        transition: opacity .5s;
+    }
+    .header-nav a:hover::after{
+        opacity: 1;
     }
     @media (max-width: 75rem) {
 		.header-nav{
@@ -45,16 +59,25 @@
         }
 	}
     @media (max-width: 53rem) {
-		.header-nav{
-            top: 3rem;
+        .header-nav{
+            width: 100%;
+            top: 2rem;
             right: 50%;
             transform: translateX(50%);
             text-align: center;
+            grid-template-columns: auto auto auto;
+        }
+        .header-nav a {
+            padding: .7rem;
         }
 	}
     @media (max-width: 29rem) {
-		.header-nav {
-            top: 2rem;
+        .header-nav {
+            top: 1rem;
+            font-size: .9em;
 		}
+        .header-nav a {
+            padding: .6rem;
+        }
 	}
 </style>

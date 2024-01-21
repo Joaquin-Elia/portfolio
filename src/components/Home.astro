@@ -7,8 +7,8 @@ import NavMenu from "./NavMenu.astro";
 		<h1 class="home-h1">Front end Developer</h1>
 		<NavMenu />
 		<h2>
-			<span>Hola, soy Joaquin Elia, creador de sitios estaticos y aplicaciones webs. De Buenos Aires, Argentina.</span>
-			<span>Mi experiencia la obtuve realizando proyectos freelance y personales.</span>
+			Hola soy <strong>Joaquin Elia</strong>, un desarrollador web de <strong>Buenos Aires, Argentina</strong>, especializado en el <strong>front end.</strong> 
+			Mi <strong>experiencia</strong> como freelancer, me ha permitido trabajar para distintos tipos de <strong>clientes y proyectos.</strong>
 		</h2>
 	</div>
 </section>
@@ -30,18 +30,22 @@ import NavMenu from "./NavMenu.astro";
 	}
 	.home-h1 {
 		font-family: 'Mulish', sans-serif;
-		font-size: clamp(3em, 10vw, 8.5em);
-		line-height: clamp(3rem, 9.4vw, 8.2rem);
+		font-size: clamp(3em, 8.4vw, 9.5em);
+		line-height: clamp(3rem, 8vw, 9rem);
 		letter-spacing: -1.7px;
 		text-transform: uppercase;
-		max-width: 55rem;
+		max-width: 60rem;
 	}
 	.home h2 {
-		color: #E4E4E4;
-		max-width: 50rem;
+		max-width: 43rem;
 		font-size: clamp(1.2em, 3vw, 2em);
-		line-height: clamp(1.6rem, 3.5vw, 2.8rem);
+		line-height: clamp(1.6rem, 3.5vw, 2.7rem);
 		text-wrap: pretty;
+		color: #E4E4E4;
+	}
+	.home h2 > strong {
+		color: #fff;
+		font-weight: 600;
 	}
 	@media (max-width: 75rem) {
 		.home-noise{
