@@ -32,27 +32,16 @@
     .header-nav a {
         position: relative;
         padding: .4rem .7rem;
-        transition: .5s;
     }
-    .header-nav a::after{
-        content: "";
-        position: absolute;
-        z-index: -1;
-        top: 100%;
-        left: 0;
-        left: .7rem;
-        height: 1%;
-        width: 30%;
-        opacity: 0;
-        background-color: #fff;
-        transition: opacity .5s;
-    }
-    .header-nav a:hover::after{
-        opacity: 1;
+    .header-nav a:hover{
+        text-decoration: underline .1rem;
+        text-underline-offset: .2rem;
     }
     @media (max-width: 75rem) {
 		.header-nav{
 			right: 2rem;
+            justify-content: center;
+            column-gap: 1rem;
     	}
         .header-nav a {
             padding: .5rem;
@@ -65,6 +54,7 @@
             right: 50%;
             transform: translateX(50%);
             text-align: center;
+            column-gap: 0;
             grid-template-columns: auto auto auto;
         }
         .header-nav a {
