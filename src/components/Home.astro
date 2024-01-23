@@ -4,8 +4,11 @@ import NavMenu from "./NavMenu.astro";
 
 <section class="home">
 	<div class="home-noise">
-		<h1 class="home-h1">Front end Developer</h1>
-		<NavMenu />
+		<div class="flex">
+			<h1 class="home-h1">Front end Developer</h1>
+			<NavMenu />
+
+		</div>
 		<h2>
 			Hola soy <strong>Joaquin Elia</strong>, un desarrollador web de <strong>Buenos Aires, Argentina</strong>, especializado en el <strong>front end.</strong> 
 			Mi <strong>experiencia</strong> como freelancer, me ha permitido trabajar para distintos tipos de <strong>clientes y proyectos.</strong>
@@ -20,9 +23,15 @@ import NavMenu from "./NavMenu.astro";
 		background-size: cover;
 		overflow: hidden;
 	}
+	.flex{
+		display: flex;
+		justify-content: space-between;
+	}
 	.home-noise {
 		padding: 2rem 4rem;
 		height: 100%;
+		max-width: 110rem;
+		margin: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -58,9 +67,14 @@ import NavMenu from "./NavMenu.astro";
 			background-size: 160% 100%;
 			background-position-x: 55%;
 		}
+		.flex{
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
 		.home-noise{
 			padding: 0;
-			justify-content: center;
+			justify-content: space-evenly;
 			align-items: center;
 		}
 		.home-h1 {
@@ -68,6 +82,7 @@ import NavMenu from "./NavMenu.astro";
 			letter-spacing: 0;
 			font-size: clamp(2.9em, 13vw, 8.5em);
 			line-height: clamp(3rem, 12.4vw, 8.2rem);
+			order: 2;
 		}
 		.home h2 {
 			color: #E4E4E4;

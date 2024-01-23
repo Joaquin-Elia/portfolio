@@ -52,16 +52,17 @@
         font-size: clamp(2.8em, 15vw, 15em);
         letter-spacing: -2px;
         text-align: center;
-        padding: 5rem 0 1rem;
+        padding: 4rem 0 2rem;
         font: 'Mulish', sans-serif;
         font-weight: 900;
     }
     .works {
-        max-width: 120rem;
+        max-width: 110rem;
         margin: auto;
         position: relative;
         width: 100%;
-        min-height: 100vh;
+        height: 100dvh;
+        max-height: 70rem;
         display: flex;
         justify-content: flex-end;
         color: var(--proyect-text-color);
@@ -97,6 +98,7 @@
     .works img{
         width: 60%;
         max-width: 55rem;
+        max-height: 45rem;
         object-fit: contain;
         transform: perspective(40rem) rotateY(-5deg);
     }
@@ -121,11 +123,12 @@
     }
     @media (max-width: 53rem) {
         .work {
-            padding: 2rem;
+            padding: 2rem 2rem 0;
         }
         .works{
-            min-height: unset;
             width: 100%;
+            max-height: 60rem;
+            height: unset;
             flex-direction: column;
             gap: 2rem;
             padding: 0;
@@ -148,14 +151,25 @@
         .work {
             padding: 1rem;
         }
+        .work-title{
+            padding: 2rem 0;
+        }
+        .works {
+            justify-content: flex-start;
+            max-height: 45rem;
+        }
         .work-description {
-            font-size: .95em;
+            margin-top: .5rem;
+            font-weight: 600;
             line-height: 1.3rem;
         }
         .works-text h4 {
             margin-top: .8rem;
             font-size: 1.6em;
             letter-spacing: -0.6px;
+        }
+        .works img{
+            margin-bottom: 2rem;
         }
 	}
 </style>

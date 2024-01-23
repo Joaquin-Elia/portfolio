@@ -21,16 +21,13 @@
 
 <style>
     .header-nav{
-        position: fixed;
-        top: 2rem;
-        right: 4rem;
         display: grid;
-        grid-template-columns: auto auto;
-        z-index: 3;
+        grid-template: repeat(3, 2.4rem) / 1fr 100px;
+        padding: 0;
         text-transform: uppercase;
+        z-index: 3;
     }
     .header-nav a {
-        position: relative;
         padding: .4rem .7rem;
     }
     .header-nav a:hover{
@@ -50,12 +47,12 @@
     @media (max-width: 53rem) {
         .header-nav{
             width: 100%;
+            grid-template-columns: auto auto auto;
+            position: absolute;
             top: 2rem;
             right: 50%;
             transform: translateX(50%);
             text-align: center;
-            column-gap: 0;
-            grid-template-columns: auto auto auto;
         }
         .header-nav a {
             padding: .7rem;
@@ -63,7 +60,7 @@
 	}
     @media (max-width: 29rem) {
         .header-nav {
-            top: 1rem;
+            top: .5rem;
             font-size: .9em;
 		}
         .header-nav a {
