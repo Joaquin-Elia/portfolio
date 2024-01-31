@@ -28,11 +28,25 @@
         z-index: 3;
     }
     .header-nav a {
+        position: relative;
         padding: .4rem .7rem;
     }
-    .header-nav a:hover{
-        text-decoration: underline .1rem;
-        text-underline-offset: .2rem;
+    .header-nav a:hover:before{
+        transform: scaleX(1);
+        transition-timing-function: ease;
+    }
+    .header-nav a::before{
+        content: '';
+        position: absolute;
+        bottom: .2rem;
+        left: .7rem;
+        width: 70%;
+        height: 1px;
+        will-change: transform, color;
+        transform: scaleX(0);
+        transform-origin: -10% 50%;
+        transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94), background .3s;
+        background-color: var(--light-gray);
     }
     @media (max-width: 75rem) {
 		.header-nav{

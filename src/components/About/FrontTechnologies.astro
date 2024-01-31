@@ -1,0 +1,22 @@
+---
+const front = ['HTML','CSS','JavaScript','React','Bootstrap', 'Astro', 'Figma', 'Git', 'Github']
+// const back = ['Node.js','Express.js','MongoDB','Firebase','Postman']
+---
+
+<div>
+    <ul>
+        {front.map((items) => 
+            <li>{items}</li>
+        )}
+    </ul>
+</div>  
+
+<style>
+    ul {
+        width: 13rem;
+        display: flex;
+        gap: .8rem;
+        flex-wrap: wrap;
+        font-size: .9em;
+    }
+</style>

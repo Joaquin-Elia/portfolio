@@ -1,4 +1,9 @@
-<section>
+---
+import BackTechnologies from "./BackTechnologies.astro"
+import FrontTechnologies from "./FrontTechnologies.astro"
+---
+
+<section id="about">
     <img src="../src/assets/aboutMe.png" alt="Joaquin Elia desarrollador web Fullstack">
     <div>
         <p>¡Hola, soy Joaquín! De chico disfrutaba el proceso de hacer realidad las ideas que imaginaba. En 2021, mientras buscaba mi pasión, descubrí el desarrollo web. Desde el momento en que comencé a dar mis primeros estilos en CSS, supe que esto era lo mío.</p>
@@ -9,27 +14,11 @@
         <div class="technologies">
             <div>
                 <h4>Frontend</h4>
-                <div>
-                    <ul><li>HTML</li></ul>
-                    <ul><li>CSS</li></ul>
-                    <ul><li>JavaScript</li></ul>
-                    <ul><li>React</li></ul>
-                    <ul><li>Bootstrap</li></ul>
-                    <ul><li>Astro</li></ul>
-                    <ul><li>Figma</li></ul>
-                    <ul><li>Git</li></ul>
-                    <ul><li>Github</li></ul>
-                </div>  
+                <FrontTechnologies />
             </div>
             <div>
                 <h4>Backend</h4>
-                <div>
-                    <ul><li>Node.js</li></ul>
-                    <ul><li>Express.js</li></ul>
-                    <ul><li>MongoDB</li></ul>
-                    <ul><li>Firebase</li></ul>
-                    <ul><li>Postman</li></ul>
-                </div>
+                <BackTechnologies />
             </div>
         </div>
     </div>
@@ -77,9 +66,5 @@
         font-size: 1.2em;
         font-weight: 700;
         margin-bottom: .5rem;
-    }
-    ul {
-        color: #e4e4e4;
-        font-size: .9em;
     }
 </style>
