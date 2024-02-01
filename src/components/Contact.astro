@@ -85,7 +85,8 @@
         font-weight: 600;
     }
     menu{
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
         gap: 1rem;
         cursor: pointer;
     }
@@ -102,32 +103,28 @@
             padding: 2rem 2rem 0;
         }
         menu{
-            flex-wrap: wrap;
-            text-align: center;
             justify-content: center;
         }
     }
     @media (max-width: 29rem) {
         #contact h2 {
             font-size: 2.3em;
-            margin-bottom: .5rem;
+            margin-bottom: 1.5rem;
         }
         p{
             font-size: .85em;
             line-height: 1.2rem;
         }
         menu {
-            gap: .5rem;
+            grid-template-columns: repeat(2, auto);
         }
         .btn-container{
-            display: flex;
-            justify-content: space-between;
             margin: 1.5rem auto;
             padding: .3rem .7rem;
-            width: 12.5rem;
-            background-color: var(--gray-blue);
-            color: var(--blue-color);
-            cursor: pointer;
+        }
+        h3{
+            font-size: 1.4em;
+            order: 2;
         }
     }
 </style>
