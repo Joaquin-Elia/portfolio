@@ -4,38 +4,44 @@ import NavMenu from "./NavMenu.astro";
 
 <section class="home">
 	<div class="home-noise">
-		<div class="home-top">
-			<h1 class="home-h1">Front end Developer</h1>
-			<NavMenu />
+		<div class="max-width">
+			<header class="home-top">
+				<h1 class="home-h1">Fullstack developer</h1>
+				<NavMenu />
+			</header>
+			<h2>
+				Hola soy Joaquin Elia, un desarrollador web de Buenos Aires, Argentina, especializado en el frontend. 
+				Mi experiencia como freelancer, me ha permitido trabajar para distintos tipos de clientes y proyectos.
+			</h2>
 		</div>
-		<h2>
-			Hola soy <strong>Joaquin Elia</strong>, un desarrollador web de <strong>Buenos Aires, Argentina</strong>, especializado en el <strong>front end.</strong> 
-			Mi <strong>experiencia</strong> como freelancer, me ha permitido trabajar para distintos tipos de <strong>clientes y proyectos.</strong>
-		</h2>
 	</div>
 </section>
 
 <style>
 	.home {
 		height: 100dvh;
+		max-height: 90rem;
 		background: url('../assets/homeBg.jpg') no-repeat;
 		background-size: cover;
 		overflow: hidden;
 	}
-	.home-top{
-		display: flex;
-		justify-content: space-between;
-	}
 	.home-noise {
-		padding: 2rem 4rem;
+		height: 100%;
+		background: url('../assets/homeNoise.svg') no-repeat;
+		background-size: cover;
+	}
+	.max-width{
 		height: 100%;
 		max-width: 120rem;
 		margin: auto;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		background: url('../assets/homeNoise.svg') no-repeat;
-		background-size: cover;
+		padding: 2rem 4rem;
+	}
+	.home-top{
+		display: flex;
+		justify-content: space-between;
 	}
 	.home-h1 {
 		font-family: 'Mulish', sans-serif;
@@ -47,17 +53,13 @@ import NavMenu from "./NavMenu.astro";
 	}
 	.home h2 {
 		max-width: 43rem;
-		font-size: clamp(1.2em, 3vw, 2em);
-		line-height: clamp(1.6rem, 3.5vw, 2.7rem);
+		font-size: clamp(1.1em, 2.7vw, 1.85em);
+		line-height: clamp(1.6rem, 3.3vw, 2.5rem);
 		text-wrap: pretty;
 		color: #E4E4E4;
 	}
-	.home h2 > strong {
-		color: #fff;
-		font-weight: 600;
-	}
 	@media (max-width: 75rem) {
-		.home-noise{
+		.max-width{
 			padding: 2rem;
 		}
 	}
@@ -71,7 +73,7 @@ import NavMenu from "./NavMenu.astro";
 			justify-content: center;
 			align-items: center;
 		}
-		.home-noise{
+		.max-width{
 			padding: 0;
 			justify-content: space-evenly;
 			align-items: center;

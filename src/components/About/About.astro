@@ -4,21 +4,23 @@ import FrontTechnologies from "./FrontTechnologies.astro"
 ---
 
 <section id="about">
-    <img src="../src/assets/aboutMe.png" alt="Joaquin Elia desarrollador web Fullstack">
-    <div>
-        <p>¡Hola, soy Joaquín! De chico disfrutaba el proceso de hacer realidad las ideas que imaginaba. En 2021, mientras buscaba mi pasión, descubrí el desarrollo web. Desde el momento en que comencé a dar mis primeros estilos en CSS, supe que esto era lo mío.</p>
-        <p>Fui reconocido como uno de los mejores alumnos en mi primer curso. Esto me abrió las puertas a trabajar de manera freelance en un proyecto colaborativo, para una agencia de marketing digital de Perú.</p>
-        <p>Tras brindar apoyo a compañeros, despejando dudas y compartiendo conocimientos, algunos me buscaron por clases particulares, fortaleciendo así mis habilidades.</p>
-        <p>Me gustaría sumarme a un equipo que comparta mi objetivo por la mejora constante para seguir expandiendo mis conocimientos.</p>
-        <h3>Tecnologías</h3>
-        <div class="technologies">
-            <div>
-                <h4>Frontend</h4>
-                <FrontTechnologies />
-            </div>
-            <div>
-                <h4>Backend</h4>
-                <BackTechnologies />
+    <div class="max-width">
+        <img src="../src/assets/aboutMe.png" alt="Joaquin Elia desarrollador web Fullstack">
+        <div>
+            <p>¡Hola, soy Joaquín! De chico disfrutaba el proceso de hacer realidad las ideas que imaginaba. En 2021, mientras buscaba mi pasión, descubrí el desarrollo web. Desde el momento en que comencé a dar mis primeros estilos en CSS, supe que esto era lo mío.</p>
+            <p>Fui reconocido como uno de los mejores alumnos en mi primer curso. Esto me abrió las puertas a trabajar de manera freelance en un proyecto colaborativo, para una agencia de marketing digital de Perú.</p>
+            <p>Tras brindar apoyo a compañeros, despejando dudas y compartiendo conocimientos, algunos me buscaron por clases particulares, fortaleciendo así mis habilidades.</p>
+            <p>Me gustaría sumarme a un equipo que comparta mi objetivo por la mejora constante para seguir expandiendo mis conocimientos.</p>
+            <h3>Tecnologías</h3>
+            <div class="technologies">
+                <div>
+                    <h4>Frontend</h4>
+                    <FrontTechnologies />
+                </div>
+                <div>
+                    <h4>Backend</h4>
+                    <BackTechnologies />
+                </div>
             </div>
         </div>
     </div>
@@ -29,8 +31,13 @@ import FrontTechnologies from "./FrontTechnologies.astro"
     section {
         background-color: var(--dark-blue);
         padding: 8rem 4rem;
+    }
+    .max-width {
+        max-width: 120rem;
+        margin: auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 8rem;
     }
     img {
         width: 20rem;
@@ -41,15 +48,15 @@ import FrontTechnologies from "./FrontTechnologies.astro"
     }
     p{
         max-width: 47rem;
-        font-size: 1.25em;
-        line-height: 2rem;
+        font-size: clamp(.95em, 1.5vw, 1.25em);
+        line-height: clamp(1.55rem, 4vw, 2.1rem);;
         margin-bottom: 1rem;
         color: #e4e4e4;
         text-wrap: pretty;
     }
     h3 {
         font-size: 1.9em;
-        margin-top: 2rem;
+        margin-top: 3rem;
     }
     .technologies{
         display: flex;
@@ -59,12 +66,58 @@ import FrontTechnologies from "./FrontTechnologies.astro"
     .technologies div{
         width: 13rem;
         display: flex;
-        gap: .8rem;
         flex-wrap: wrap;
+        gap: .8rem;
     }
     h4 {
         font-size: 1.2em;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: .5rem;
+    }
+    @media (max-width: 75rem) {
+        .max-width {
+            padding: 0 1rem;
+            gap: 4rem;
+        }
+        p{
+            max-width: 40rem;
+        }
+        .technologies{
+            gap: 2rem;
+        }
+    }
+    @media (max-width: 53rem) {
+        section {
+            background-color: var(--dark-blue);
+            padding: 6rem 1rem;
+        }
+        .max-width {
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+        img{
+            width: 15rem;
+            height: 23rem;
+        }
+        p{
+            max-width: 30rem;
+        }
+    }
+    @media (max-width: 29rem) {
+        section {
+            background-color: var(--dark-blue);
+            padding: 4rem 1rem;
+        }
+        p{
+            max-width: unset;
+        }
+        h3 {
+            margin-top: 2rem;
+        }
+        .technologies{
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
     }
 </style>

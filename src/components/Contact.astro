@@ -1,0 +1,133 @@
+<section id="contact">
+    <h2>CONTACTO</h2>
+    <p>En busca de un nuevo desafío profesional.</p>
+    <p>No dudes en contactarme.</p>
+    <div class="btn-container">
+        <button>CONECTAR</button>
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+            </svg>
+        </span>
+    </div>
+    <footer>
+        <h3>JOAQUIN ELIA</h3>
+        <menu>
+            <li><a>CORREO</a></li>
+            <li>       
+                <a href="https://github.com/Joaquin-Elia/" target="_blank" rel="noopener noreferrer">
+                    GITHUB
+                </a>
+            </li>
+            <li>            
+                <a href="https://www.linkedin.com/in/joaquin-elia/" target="_blank" rel="noopener noreferrer">
+                    LINKEDIN
+                </a>
+            </li>
+            <li><a href="/#contact">CV</a></li>
+        </menu>
+    </footer>
+</section>
+
+<style>
+    #contact {
+        background-color: var(--dark-blue);
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+    #contact h2 {
+        font-size: 2.8em;
+        font-family: 'Mulish', sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 2rem;
+    }
+    p{
+        font-size: .95em;
+        line-height: 1.35rem;
+    }
+    .btn-container{
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem auto;
+        padding: .5rem .7rem;
+        width: 12.5rem;
+        background-color: var(--gray-blue);
+        color: var(--blue-color);
+        cursor: pointer;
+    }
+    button{
+        all: unset;
+        font-weight: 600;
+        text-align: start;
+    }
+    .btn-container span {
+        position: relative;
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--blue-color);
+        border-radius: 50%;
+        font-size: 1em;
+    }
+    span svg {
+        width: 30px;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 4rem 0;
+    }
+    h3{
+        font-size: 2em;
+        font-weight: 600;
+    }
+    menu{
+        display: flex;
+        gap: 1rem;
+        cursor: pointer;
+    }
+    a{
+        position: relative;
+        padding: .4rem .7rem;
+    }
+    @media (max-width: 53rem) {
+        footer{
+            position: relative;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem 4rem;
+            padding: 2rem 2rem 0;
+        }
+        menu{
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+    }
+    @media (max-width: 29rem) {
+        #contact h2 {
+            font-size: 2.3em;
+            margin-bottom: .5rem;
+        }
+        p{
+            font-size: .85em;
+            line-height: 1.2rem;
+        }
+        menu {
+            gap: .5rem;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: space-between;
+            margin: 1.5rem auto;
+            padding: .3rem .7rem;
+            width: 12.5rem;
+            background-color: var(--gray-blue);
+            color: var(--blue-color);
+            cursor: pointer;
+        }
+    }
+</style>
