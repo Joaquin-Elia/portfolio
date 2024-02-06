@@ -1,23 +1,20 @@
 <nav class="header-nav">
     <ul>
-        <li><a href="/#work">Proyectos</a></li>
-        <li>
+        <li class="proyects"><a href="/#work">Proyectos</a></li>
+        <li class="github">
             <a href="https://github.com/Joaquin-Elia/" target="_blank" rel="noopener noreferrer">
                 Github
             </a>
         </li>
-        <li><a href="/#about">Sobre mi</a></li>
-        <li>    
+        <li class="about"><a href="/#about">Sobre mi</a></li>
+        <li class="linkedin">    
             <a href="https://www.linkedin.com/in/joaquin-elia/" target="_blank" rel="noopener noreferrer">
             Linkedin
             </a>
         </li>
-        <li><a href="/#contact">Contacto</a></li>
-        <li><a href="/#contact">cv</a></li>
+        <li class="contact"><a href="/#contact">Contacto</a></li>
+        <li class="cv"><a href="/#contact">cv</a></li>
     </ul>
-    
-    
-    
 </nav>
 
 <style>
@@ -61,5 +58,24 @@
         .header-nav a {
             padding: .6rem .3rem;
         }
+        .proyects{
+            order: 1;
+        }
+        .about{
+            order: 2;
+        }
+        .contact{
+            order: 3;
+        }
+        .github{
+            order: 4;
+        }
+        .linkedin{
+            order: 5;
+        }
+        .cv{
+            order: 6;
+        }
+
 	}
 </style>

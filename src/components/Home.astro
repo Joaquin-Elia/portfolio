@@ -19,7 +19,7 @@ import NavMenu from "./NavMenu.astro";
 
 <style>
 	.home {
-		height: 100dvh;
+		height: 100svh;
 		max-height: 90rem;
 		background: url('../assets/homeBg.jpg') no-repeat;
 		background-size: cover;
@@ -27,8 +27,7 @@ import NavMenu from "./NavMenu.astro";
 	}
 	.home-noise {
 		height: 100%;
-		background: url('../assets/homeNoise.svg') no-repeat;
-		background-size: cover;
+		background: url('../assets/noise.png');
 	}
 	.max-width{
 		height: 100%;
@@ -56,7 +55,7 @@ import NavMenu from "./NavMenu.astro";
 		font-size: clamp(1.1em, 2.7vw, 1.85em);
 		line-height: clamp(1.6rem, 3.3vw, 2.5rem);
 		text-wrap: pretty;
-		color: #E4E4E4;
+		color: var(--light-gray);
 	}
 	@media (max-width: 75rem) {
 		.max-width{
@@ -86,15 +85,15 @@ import NavMenu from "./NavMenu.astro";
 			order: 2;
 		}
 		.home h2 {
-			color: #E4E4E4;
-			padding: 0 4rem;
 			position: absolute;
 			bottom: 2rem;
+			padding: 0 4rem;
 		}
 	}
 	@media (max-width: 29rem) {
 		.home h2 {
 			left: 0;
+			bottom: 1rem;
 			padding: 0 1rem;
 		}
 	}

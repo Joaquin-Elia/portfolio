@@ -5,7 +5,11 @@ import FrontTechnologies from "./FrontTechnologies.astro"
 
 <section id="about">
     <div class="max-width">
-        <img src="../src/assets/aboutMe.png" alt="Joaquin Elia desarrollador web Fullstack">
+        <img 
+            src="../src/assets/aboutMe.webp" 
+            alt="Joaquin Elia desarrollador web Fullstack"
+            loading="lazy"
+        >
         <div>
             <p>¡Hola, soy Joaquín! De chico disfrutaba el proceso de hacer realidad las ideas que imaginaba. En 2021, mientras buscaba mi pasión, descubrí el desarrollo web. Desde el momento en que comencé a dar mis primeros estilos en CSS, supe que esto era lo mío.</p>
             <p>Fui reconocido como uno de los mejores alumnos en mi primer curso. Esto me abrió las puertas a trabajar de manera freelance en un proyecto colaborativo, para una agencia de marketing digital de Perú.</p>
@@ -64,7 +68,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         margin-top: 2rem;
     }
     .technologies div{
-        width: 13rem;
+        width: 11rem;
         display: flex;
         flex-wrap: wrap;
         gap: .8rem;
@@ -83,7 +87,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
             max-width: 40rem;
         }
         .technologies{
-            gap: 2rem;
+            gap: 3rem;
         }
     }
     @media (max-width: 53rem) {
@@ -108,6 +112,9 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         section {
             background-color: var(--dark-blue);
             padding: 4rem 1rem;
+        }
+        .max-width {
+            padding: 0;
         }
         p{
             max-width: unset;

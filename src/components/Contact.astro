@@ -11,9 +11,8 @@
         </span>
     </div>
     <footer>
-        <h3>JOAQUIN ELIA</h3>
+        <a href="#" class="email">joaquin.elia@hotmail.com</a>
         <menu>
-            <li><a>CORREO</a></li>
             <li>       
                 <a href="https://github.com/Joaquin-Elia/" target="_blank" rel="noopener noreferrer">
                     GITHUB
@@ -80,13 +79,13 @@
         align-items: center;
         padding: 2rem 4rem 0;
     }
-    h3{
-        font-size: 2em;
+    footer > a{
         font-weight: 600;
     }
     menu{
-        display: grid;
-        grid-template-columns: repeat(4, auto);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
         cursor: pointer;
     }
@@ -100,13 +99,13 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 2rem 4rem;
-            padding: 2rem 2rem 0;
-        }
-        menu{
-            justify-content: center;
+            padding: 1rem 2rem 0;
         }
     }
     @media (max-width: 29rem) {
+        #contact {
+            padding: 1rem 0;
+        }
         #contact h2 {
             font-size: 2.3em;
             margin-bottom: 1.5rem;
@@ -115,16 +114,19 @@
             font-size: .85em;
             line-height: 1.2rem;
         }
-        menu {
-            grid-template-columns: repeat(2, auto);
-        }
         .btn-container{
             margin: 1.5rem auto;
             padding: .3rem .7rem;
         }
         h3{
             font-size: 1.4em;
-            order: 2;
+        }
+        footer{
+            gap: 1rem 2rem;
+            padding: 1rem 2rem 0;
+        }
+        footer > a {
+            order: 1;
         }
     }
 </style>
