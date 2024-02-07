@@ -1,29 +1,28 @@
+---
+import ExternalLinks from '../components/ExternalLinks.astro'
+---
+
 <section id="contact">
     <h2>CONTACTO</h2>
     <p>En busca de un nuevo desafío profesional.</p>
     <p>No dudes en contactarme.</p>
-    <div class="btn-container">
-        <button>CONECTAR</button>
+    <a  
+        href="https://www.linkedin.com/in/joaquin-elia/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="btn-container"
+    >
+        CONECTAR
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
             </svg>
         </span>
-    </div>
+    </a>
     <footer>
-        <a href="#" class="email">joaquin.elia@hotmail.com</a>
+        <a href="mailto:joaquin.elia@hotmail.com" class="email">joaquin.elia@hotmail.com</a>
         <menu>
-            <li>       
-                <a href="https://github.com/Joaquin-Elia/" target="_blank" rel="noopener noreferrer">
-                    GITHUB
-                </a>
-            </li>
-            <li>            
-                <a href="https://www.linkedin.com/in/joaquin-elia/" target="_blank" rel="noopener noreferrer">
-                    LINKEDIN
-                </a>
-            </li>
-            <li><a href="/#contact">CV</a></li>
+            <ExternalLinks />
         </menu>
     </footer>
 </section>
@@ -40,24 +39,21 @@
         letter-spacing: 1px;
         margin-bottom: 2rem;
     }
-    p{
+    #contact > p{
         font-size: .95em;
         line-height: 1.35rem;
     }
     .btn-container{
+        width: 12.5rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         margin: 2rem auto;
         padding: .5rem .7rem;
-        width: 12.5rem;
+        font-weight: 600;
         background-color: var(--gray-blue);
         color: var(--blue-color);
         cursor: pointer;
-    }
-    button{
-        all: unset;
-        font-weight: 600;
-        text-align: start;
     }
     .btn-container span {
         position: relative;
@@ -68,7 +64,7 @@
         font-size: 1em;
     }
     span svg {
-        width: 30px;
+        width: 1.87rem;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -80,6 +76,8 @@
         padding: 2rem 4rem 0;
     }
     footer > a{
+        position: relative;
+        padding: .4rem;
         font-weight: 600;
     }
     menu{
@@ -87,11 +85,6 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
-        cursor: pointer;
-    }
-    a{
-        position: relative;
-        padding: .4rem .7rem;
     }
     @media (max-width: 53rem) {
         footer{
