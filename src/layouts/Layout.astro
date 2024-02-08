@@ -70,8 +70,8 @@ const { title } = Astro.props;
         content: '';
 		display: block;
         position: absolute;
-        bottom: .2rem;
-        left: .7rem;
+        bottom: .1rem;
+        left: .6rem;
         width: 90%;
         height: 1px;
         will-change: transform, color;
@@ -99,6 +99,10 @@ const { title } = Astro.props;
 		order: 6;
 	}
 	@media (max-width: 29rem) {
+		a::before{
+			left: .35rem;
+			width: 85%;
+		}
         .about{
             order: 2;
         }

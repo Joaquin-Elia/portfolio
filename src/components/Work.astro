@@ -5,9 +5,10 @@
             <h3>MARIANO JUAREZ</h2>
             <h4>Portfolio para Diseñador Gráfico</h3>
             <p class="work-description">
-                El objetivo fue exponer el portfolio con un estilo peculiar. En conjunto modificamos el diseño original 
-                para encausarlo en la búsqueda de los estándares de UX y UI. Como característica, en cada actualización, 
-                el orden y rotación de los proyectos se disponen de manera aleatoria
+                El diseñador me presentó un prototipo inicial del portfolio que tenia en mente.
+                Juntos, completamos secciones inconclusas y perfeccionamos detalles. 
+                Propuse agregar dinamismo al disponer y rotar los proyectos de forma aleatoria en cada actualización. 
+                Se priorizó la calidad de los trabajos sobre los tiempos de carga, con la intención de mejorar la experiencia visual de los visitantes.
             </p>
         </div>
         <img 
@@ -18,13 +19,13 @@
     </article>
     <article class="works">
         <div class="works-text">
-            <h3>ESTUDIO EYS</h2>
+            <h3>ESTUDIO ERSA</h2>
             <h4>Web para clientes</h3>
             <p class="work-description">
-                Solicitud de una presentación de servicios profesionales, con estética moderna, presencia en la web y 
-                herramientas de cálculo matemático. Previo análisis de tendencias, diseñé un wireframe para proyectar
-                la estructura de la web. Indagué conceptos legales para el desarrollo de cálculos indemnizatorios. 
-                Con procesos modulares pude obtener un código limpio y escalable.
+                Fui contactado para diseñar y desarrollar un sitio web moderno y profesional. 
+                Se me encargó construir calculadoras de indemnización para uso interno del estudio,
+                con el objetivo de proporcionar respuestas rápidas y estimativas a los clientes.
+                Trabajé en optimizar el rendimiento y la velocidad de carga a fin de incrementar el posicionamiento SEO.
             </p>
         </div>
         <img 
@@ -50,6 +51,7 @@
 <style>
     .work{
         background: var(--gray-blue) url('../assets/noise2.png');
+        color: var(--blue-color);
     }
     .work-title{
         font-size: clamp(1.7em, 8vw, 2.7em);
@@ -57,7 +59,6 @@
         text-align: center;
         padding: 6rem 4rem;
         font-weight: 600;
-        color: var(--blue-color);
     }
     .works {
         max-width: 120rem;
@@ -66,18 +67,17 @@
         width: 100%;
         height: 100dvh;
         max-height: 70rem;
+        min-height: 35rem;
         display: flex;
         justify-content: flex-end;
-        color: var(--blue-color);
-        overflow: hidden;
-        padding: 2rem 4rem 2rem 0;
+        padding: 0 4rem 2rem 0;
     }
     .works-text {
+        width: 40%;
         position: absolute;
-        top: 0rem;
+        top: 1rem;
         left: 4rem;
         z-index: 2;
-        width: 40%;
     }
     .works-text h3 {
         max-width: 33rem;
@@ -93,22 +93,17 @@
     }
     .work-description {
         margin-top: 1rem;
-        max-width: 30rem;
+        max-width: 31rem;
         text-wrap: pretty;
         font-size: 1.1em;
-        line-height: 1.4rem;
+        line-height: 1.4;
     }
     .works img{
-        width: 60%;
+        width: 55%;
         max-width: 55rem;
         max-height: 45rem;
         object-fit: contain;
         transform: perspective(40rem) rotateY(-5deg);
-    }
-    @media (max-width: 85rem) {
-        .works img{
-            width: 55%;
-        }
     }
     @media (max-width: 75rem) {
         .works {
@@ -163,11 +158,11 @@
         }
         .work-description {
             margin-top: .5rem;
-            font-weight: 600;
-            line-height: 1.3rem;
+            font-size: .95em;
+            line-height: 1.3;
         }
         .works-text h4 {
-            margin-top: .8rem;
+            margin-top: 1rem;
             font-size: 1.6em;
             letter-spacing: -0.6px;
         }
