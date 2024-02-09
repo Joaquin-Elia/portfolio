@@ -1,0 +1,39 @@
+---
+const proyects = [
+    {
+        title: "MARIANO JUAREZ",
+        subtitle: "Portfolio para Diseñador Gráfico",
+        description: "El diseñador me presentó un prototipo inicial del portfolio que tenia en mente. Juntos, completamos secciones inconclusas y perfeccionamos detalles. Propuse agregar dinamismo al disponer y rotar los proyectos de forma aleatoria en cada actualización. Se priorizó la calidad de los trabajos sobre los tiempos de carga, con la intención de mejorar la experiencia visual de los visitantes.",
+        img: "../../src/assets/marianojuarez.webp"
+    },
+    {
+        title: "ESTUDIO ERSA",
+        subtitle: "Web para clientes",
+        description: "Fui contactado para diseñar y desarrollar un sitio web moderno y profesional. Se me encargó construir calculadoras de indemnización para uso interno del estudio, con el objetivo de proporcionar respuestas rápidas y estimativas a los clientes. Trabajé en optimizar el rendimiento y la velocidad de carga a fin de incrementar el posicionamiento SEO.",
+        img: "../../src/assets/estudiojuridicoeys.webp"
+    },
+    {
+        title: "AJETREO PROD",
+        subtitle: "Ecommerce productora musical",
+        description: "",
+        img: "../../src/assets/ajetreo.png"
+    }
+]
+---
+
+<>
+    {proyects.map(({title, subtitle, description, img}) => 
+        <article class="works">
+            <div class="works-text">
+                <h3>{title}</h2>
+                <h4>{subtitle}</h3>
+                <p class="work-description">{description}</p>
+            </div>
+            <img 
+                src={img}
+                alt={`Proyecto ${title}, ${subtitle}`}
+                loading="lazy"
+            >
+        </article>
+    )}
+</>

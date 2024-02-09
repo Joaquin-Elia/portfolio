@@ -31,8 +31,8 @@ import FrontTechnologies from "./FrontTechnologies.astro"
 </section>
 
 
-<style>
-    section {
+<style is:global>
+    #about {
         background-color: var(--dark-blue);
         padding: 8rem 4rem;
     }
@@ -43,14 +43,14 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         justify-content: center;
         gap: 8rem;
     }
-    img {
+    #about img {
         width: 20rem;
         height: 30rem;
         object-fit: cover;
         object-position: bottom;
         mix-blend-mode: luminosity;
     }
-    p{
+    #about p{
         max-width: 47rem;
         font-size: clamp(.95em, 1.5vw, 1.25em);
         line-height: clamp(1.55rem, 4vw, 2.1rem);;
@@ -58,7 +58,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         color: #e4e4e4;
         text-wrap: pretty;
     }
-    h3 {
+    #about h3 {
         font-size: 1.9em;
         margin-top: 3rem;
     }
@@ -73,7 +73,14 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         flex-wrap: wrap;
         gap: .8rem;
     }
-    h4 {
+    .technologies ul {
+        width: 13rem;
+        display: flex;
+        gap: .8rem;
+        flex-wrap: wrap;
+        font-size: .9em;
+    }
+    #about h4 {
         font-size: 1.2em;
         font-weight: 600;
         margin-bottom: .5rem;
@@ -83,7 +90,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
             padding: 0 1rem;
             gap: 4rem;
         }
-        p{
+        #about p{
             max-width: 40rem;
         }
         .technologies{
@@ -91,7 +98,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         }
     }
     @media (max-width: 53rem) {
-        section {
+        #about {
             background-color: var(--dark-blue);
             padding: 6rem 1rem;
         }
@@ -100,11 +107,11 @@ import FrontTechnologies from "./FrontTechnologies.astro"
             align-items: center;
             gap: 3rem;
         }
-        img{
+        #about img{
             width: 15rem;
             height: 23rem;
         }
-        p{
+        #about p{
             max-width: 30rem;
         }
     }
@@ -116,10 +123,10 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         .max-width {
             padding: 0;
         }
-        p{
+        #about p{
             max-width: unset;
         }
-        h3 {
+        #about h3 {
             margin-top: 2rem;
         }
         .technologies{
