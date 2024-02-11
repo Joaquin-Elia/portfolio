@@ -6,7 +6,7 @@ import FrontTechnologies from "./FrontTechnologies.astro"
 <section id="about">
     <div class="max-width">
         <img 
-            src="../src/assets/aboutMe.webp" 
+            src="/aboutMe.webp" 
             alt="Joaquin Elia desarrollador web Fullstack"
             loading="lazy"
         >
@@ -116,12 +116,12 @@ import FrontTechnologies from "./FrontTechnologies.astro"
         }
     }
     @media (max-width: 29rem) {
-        section {
-            background-color: var(--dark-blue);
-            padding: 4rem 1rem;
+        #about {
+            padding: 2rem 1rem;
         }
         .max-width {
             padding: 0;
+            gap: 2rem;
         }
         #about p{
             max-width: unset;
