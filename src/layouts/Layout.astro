@@ -16,7 +16,7 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Mulish:wght@900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Mulish:wght@800;900&display=swap" rel="stylesheet">
 		<title>{title}</title>
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
@@ -24,12 +24,12 @@ const { title, description } = Astro.props;
 		<meta property="og:url" content="https://joaquinelia.netlify.app/" />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
-		<meta property="og:image" content="/JoaquinEliaPortfolio.webp" />
+		<meta property="og:image" content="https://joaquinelia.netlify.app/joaquinelia.jpg" />
 		<meta property="twitter:card" content="summary_large_image" />
 		<meta property="twitter:url" content="https://joaquinelia.netlify.app/" />
 		<meta property="twitter:title" content={title} />
 		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="/JoaquinEliaPortfolio.webp" />
+		<meta property="twitter:image" content="https://joaquinelia.netlify.app/joaquinelia.jpg" />
 	</head>
 	<body>
 		<slot />
@@ -73,6 +73,7 @@ const { title, description } = Astro.props;
 		font-size: 100%;
 		font-family: 'Inter', sans-serif;
 		color: var(--text-color);
+		overflow-x: hidden;
 	}
 	a:hover:before{
         transform: scaleX(1);

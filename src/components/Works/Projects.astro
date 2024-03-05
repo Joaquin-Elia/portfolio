@@ -1,35 +1,39 @@
 ---
-import ProyectsData from "../../assets/ProyectsData.astro"
+import WorksData from "./WorksData.astro"
+import PersonalProjectsData from "./PersonalProjectsData.astro"
 ---
 
 <section class="work" id="work">
     <h2 class="work-title">TRABAJOS</h2>
-    <ProyectsData />
+    <WorksData />
+    <PersonalProjectsData />
 </section>
 
 <style is:global>
 .work{
     background: var(--gray-blue) url('../../assets/noise2.png');
     color: var(--blue-color);
+    padding-bottom: 4rem;
 }
 .work-title{
+    width: 20rem;
     font-size: clamp(1.7em, 8vw, 2.7em);
     letter-spacing: -.7px;
     text-align: center;
-    padding: 6rem 4rem;
+    padding: 6rem 0;
+    margin: auto;
     font-weight: 600;
 }
 .works {
     max-width: 120rem;
     width: 100%;
-    height: 100dvh;
-    max-height: 70rem;
-    min-height: 40rem;
+    min-height: 45rem;
+    height: fit-content;
     margin: auto;
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding: 0 4rem 2rem 0;
+    padding: 5rem 4rem 4rem 0;
 }
 .works-text {
     width: 40%;
@@ -121,7 +125,6 @@ import ProyectsData from "../../assets/ProyectsData.astro"
     }
     .works{
         width: 100%;
-        height: unset;
         flex-direction: column;
         gap: 2rem;
         padding: 0;
@@ -145,6 +148,7 @@ import ProyectsData from "../../assets/ProyectsData.astro"
         padding: 0 1rem 2rem;
     }
     .work-title{
+        width: 100%;
         padding: 3rem 0 0;
     }
     .work-description {

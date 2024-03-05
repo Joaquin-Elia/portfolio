@@ -1,0 +1,165 @@
+---
+const projects = [
+    {
+        title: "EINFINITY",
+        description: "project-link con IA, JavaScript, CSS Animations.",
+        web: "https://joaquin-elia.github.io/DiplomaturaNumen/",
+        img: './einfinity.webp',
+    },
+    {
+        title: "ELIABIKES",
+        description: "Ecommerce, React.js, Firebase.",
+        web: "https://eliabikes.netlify.app/",
+        img: "/eliabikes.webp",
+    },
+    {
+        title: "SKULLCANDY",
+        description: "Clon de el detalle del producto, Bootstrap.",
+        web: "https://joaquin-elia.github.io/skullcandy/",
+        img: "/skullcandy.webp",
+    }
+]
+---
+
+<>
+    <h2 class="work-title">PROYECTOS PERSONALES</h2>
+    {projects.map(({title, description, img, web}) =>
+        <>
+            <div class="top-line"></div>
+            <article class="projects-container">
+                <div class="left-content">
+                    <img 
+                        src={img}
+                        alt={`Proyecto ${title}`}
+                        loading="lazy"
+                    >
+                    <h3>{title}</h3>
+                </div>
+                <div class="right-content">
+                    <a href={web} target="_blank" rel="noopener noreferrer" class="project-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </a>
+                    <p class="project-decription">{description}</p>
+                </div>
+            </article>
+        </>
+    )}
+    <div class="top-line"></div>
+</>
+
+<style>
+    .projects-container{
+        margin: 1.5rem auto;
+        width: 90vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top-line {
+        margin: auto;
+        width: 90vw;
+        height: 1px;
+        background: var(--blue-color);
+    }
+    .left-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+    }
+    h3{
+        justify-self: start;
+        font-size: clamp(2em, 7vw, 6em);
+        font-family: 'Mulish', sans-serif;
+        font-weight: 800;
+        letter-spacing: -3.5px;
+        width: fit-content;
+    }
+    .project-decription{
+        text-wrap: nowrap;
+    }
+    .right-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    a{
+        all: unset;
+        cursor: pointer;
+    }
+    img{
+        width: 25rem;
+    }
+    .project-link {
+        width: 4.5rem;
+        rotate: -35deg;
+        margin-top: -1rem
+    }
+    .project-link::before {
+        all: unset;
+    }
+    @media (max-width: 75rem) {
+        img{
+            width: 20rem;
+        }
+    }
+    @media (max-width: 53rem) {
+        .projects-container{
+            justify-content: space-around;
+            flex-direction: column;
+        }
+        .left-content {
+            gap: .5rem;
+        }
+        h3{
+            letter-spacing: -2.5px;
+        }
+        .project-link {
+            width: 3.5rem;
+            position: relative;
+            top: -10rem;
+        }
+        .project-decription{
+            margin-top: -1.5rem;
+        }
+        img{
+            max-width: 15rem;
+            width: 50%;
+            height: 10rem;
+            object-fit: cover;
+        }
+    }
+    @media (max-width: 29rem) {
+        h2 {
+            padding: 4rem 0;
+        }
+        .projects-container{
+            width: 92vw;
+        }
+        .top-line {
+            width: 92vw;
+        }
+        .left-content{
+            align-items: flex-start;
+            flex-direction: column;
+        }
+        h3{
+            font-size: 2.4em;
+            letter-spacing: -1px;
+        }
+        .project-decription{
+            align-self: flex-start;
+            margin-top: -2.5rem;
+            text-wrap: wrap;
+        }
+        .project-link {
+            top: -2.3rem;
+        }
+        img{
+            max-width: unset;
+            width: 100%;
+            height: unset;
+        }
+    }
+</style>
